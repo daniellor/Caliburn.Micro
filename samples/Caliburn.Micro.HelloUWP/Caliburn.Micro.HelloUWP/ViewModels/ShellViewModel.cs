@@ -55,9 +55,10 @@ namespace Caliburn.Micro.HelloUWP.ViewModels
             _eventAggregator = eventAggregator;
             Samples = new BindableCollection<SampleViewModel>()
             {
-                new SampleViewModel { Title = "Device", Subtitle = "Setting up a WinRT application.", ViewModelType = typeof(DeviceViewModel) },
+                new SampleViewModel { Title = "Device", Subtitle = "", ViewModelType = typeof(DeviceViewModel) },
                 new SampleViewModel { Title = "Binding ItemTemplates", Subtitle = "Binding view model properties to your view.", ViewModelType = typeof(BindingItemTemplatesViewModel) },
-                new SampleViewModel { Title = "Binding Conventions", Subtitle = "Binding view model properties to your view.", ViewModelType = typeof(BindingConventionsViewModel) }
+                new SampleViewModel { Title = "Binding Conventions", Subtitle = "Binding view model properties to your view.", ViewModelType = typeof(BindingConventionsViewModel) },
+   
             };
 
         }

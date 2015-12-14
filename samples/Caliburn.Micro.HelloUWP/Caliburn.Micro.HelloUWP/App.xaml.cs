@@ -4,6 +4,7 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Caliburn.Micro.HelloUWP.Messages;
 using Caliburn.Micro.HelloUWP.ViewModels;
+using Windows.UI.Xaml.Controls;
 
 namespace Caliburn.Micro.HelloUWP
 {
@@ -11,7 +12,7 @@ namespace Caliburn.Micro.HelloUWP
     {
         private WinRTContainer _container;
         private IEventAggregator _eventAggregator;
-
+      
         public App()
         {
             InitializeComponent();
@@ -27,10 +28,13 @@ namespace Caliburn.Micro.HelloUWP
                 .PerRequest<DeviceViewModel>()
                 .PerRequest<BindingItemTemplatesViewModel>()
                 .PerRequest<BindingConventionsViewModel>();
+            
+        _eventAggregator = _container.GetInstance<IEventAggregator>();
 
-            _eventAggregator = _container.GetInstance<IEventAggregator>();
+           
         }
 
+       
         protected override void OnLaunched(LaunchActivatedEventArgs args)
         {
             // Note we're using DisplayRootViewFor (which is view model first)

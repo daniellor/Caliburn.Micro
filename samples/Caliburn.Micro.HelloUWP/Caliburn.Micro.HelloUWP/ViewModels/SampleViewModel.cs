@@ -20,8 +20,7 @@ namespace Caliburn.Micro.HelloUWP.ViewModels
             }
             set
             {
-                _title = value;
-                NotifyOfPropertyChange(() => Title);
+                this.Set(ref _title, value);
             }
         }
 
@@ -33,8 +32,7 @@ namespace Caliburn.Micro.HelloUWP.ViewModels
             }
             set
             {
-                _viewModelType = value;
-                NotifyOfPropertyChange(() => ViewModelType);
+                this.Set(ref _viewModelType ,value);
             }
         }
 
@@ -46,8 +44,7 @@ namespace Caliburn.Micro.HelloUWP.ViewModels
             }
             set
             {
-                _subtitle = value; 
-                NotifyOfPropertyChange(() => Subtitle);
+                this.Set(ref _subtitle, value);
             }
         }
     }
