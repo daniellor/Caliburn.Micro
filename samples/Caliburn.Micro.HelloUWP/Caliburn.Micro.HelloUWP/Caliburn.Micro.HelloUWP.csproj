@@ -91,6 +91,7 @@
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
     <None Include="project.json" />
+    <PRIResource Include="Resources\Resources.resw" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -99,8 +100,21 @@
     <Compile Include="Messages\ResumeStateMessage.cs" />
     <Compile Include="Messages\SuspendStateMessage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\BindingConventionsViewModel.cs" />
+    <Compile Include="ViewModels\BindingItemTemplatesViewModel.cs" />
+    <Compile Include="ViewModels\DeveloperViewModel.cs" />
     <Compile Include="ViewModels\DeviceViewModel.cs" />
+    <Compile Include="ViewModels\SampleViewModel.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
+    <Compile Include="Views\BindingConventionsView.xaml.cs">
+      <DependentUpon>BindingConventionsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BindingItemTemplatesView.xaml.cs">
+      <DependentUpon>BindingItemTemplatesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DeveloperView.xaml.cs">
+      <DependentUpon>DeveloperView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\DeviceView.xaml.cs">
       <DependentUpon>DeviceView.xaml</DependentUpon>
     </Compile>
@@ -142,6 +156,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Resources\StandardStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\BindingConventionsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BindingItemTemplatesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DeveloperView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\DeviceView.DeviceFamily-Mobile.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
